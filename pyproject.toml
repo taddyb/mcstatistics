@@ -19,7 +19,7 @@ dependencies = [
     "pandas",
     "ipykernel",
     "jupyterlab",
-    "PyPDF2",
+    "pypdf",
 ]
 dynamic = ["version"]  # Add this line to indicate dynamic versioning
 
