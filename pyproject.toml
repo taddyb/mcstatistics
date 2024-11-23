@@ -17,6 +17,7 @@ maintainers = [
 dependencies = [
     "numpy",
     "pandas",
+    "matplotlib",
     "ipykernel",
     "jupyterlab",
     "pypdf",

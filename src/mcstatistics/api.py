@@ -33,9 +33,9 @@ COLUMNS = [
 OZ_PATTERN = r'(\s*[^\s]+\s+oz)'
 LONG_STR_PATTERN = r'\([^)]*\)\s*'
 
-__all__ = ['read_pdf']
+__all__ = ['read_menu']
 
-def read_pdf(pdf_path: Path | str, output_path: Path | str | None = None) -> pd.DataFrame | None:
+def read_menu(pdf_path: Path | str, output_path: Path | str | None = None) -> pd.DataFrame:
     """A function to read a complex mcdonalds nutrition pdf and return a pandas dataframe
 
     Parameters
@@ -95,10 +95,4 @@ def read_pdf(pdf_path: Path | str, output_path: Path | str | None = None) -> pd.
     master_menu = pd.concat(df_list)
     if output_path:
         master_menu.to_csv(output_path, index=False)
-    else:
-        return master_menu
-
-
-if __name__ == '__main__':
-    pdf_path = Path("/Users/taddbindas/projects/mcstatistics/data/mcdonalds-nutrition-facts.pdf")
-    read_pdf(pdf_path)
+    return master_menu

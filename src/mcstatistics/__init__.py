@@ -1,3 +1,3 @@
-from .api import read_pdf
+from .api import read_menu
 
-__all__ = ['read_pdf']
+__all__ = ['read_menu']
